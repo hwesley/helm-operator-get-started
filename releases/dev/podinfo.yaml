@@ -11,7 +11,7 @@ spec:
   releaseName: digital-twin-api-dev-rn
   chart:
     git: git@bitbucket.org:iminds/digital-twin-k8s
-    path: digital-twin/charts/backend/charts/api
+    path: digital-twin/charts/backend/charts/API
     ref: master
   values:
     image:
