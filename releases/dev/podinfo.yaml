@@ -20,10 +20,17 @@ spec:
       - name: digitaltwinregistry
     ingress:
       enabled: true
-      tls: []
+      annotations:
+        kubernetes.io/ingress.class: nginx
+        certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+        nginx.ingress.kubernetes.io/enable-cors: "true"
+      tls:
+        - secretName: tls-secret
+          hosts:
+            - api.dev.digitaltwin.imec-apt.be
       hosts:
-        - host: api.minikube.local
+        - host: api.dev.digitaltwin.imec-apt.be
           paths:
-            - /(.*)
+             - /(.*)
     environment:
       PROTOCOL: http
