@@ -2,13 +2,13 @@
 apiVersion: flux.weave.works/v1beta1
 kind: HelmRelease
 metadata:
-  name: digital-twin-flux
+  name: digital-twin
   namespace: default
   annotations:
 #    flux.weave.works/automated: "true"
 #    flux.weave.works/tag.chart-image: glob:dev-*
 spec:
-  releaseName: digital-twin-flux-rn
+  releaseName: digital-twin
   chart:
     git: git@bitbucket.org:iminds/digital-twin-k8s
     path: digital-twin
@@ -46,8 +46,9 @@ spec:
       visualisation-api:
         image:
           tag: 0.1.0
+
   valuesFrom:
     - chartFileRef:
-        path: environments/development/config.yaml
+        path: environments/local/config.yaml
     - chartFileRef:
-        path: environments/development/environment.yaml
+        path: environments/local/environment.yaml
