@@ -2,13 +2,13 @@
 apiVersion: flux.weave.works/v1beta1
 kind: HelmRelease
 metadata:
-  name: digital-twin-api-dev
-  namespace: stg
+  name: digital-twin-flux
+  namespace: default
   annotations:
 #    flux.weave.works/automated: "true"
 #    flux.weave.works/tag.chart-image: glob:dev-*
 spec:
-  releaseName: digital-twin-api-dev-rn
+  releaseName: digital-twin-flux-rn
   chart:
     git: git@bitbucket.org:iminds/digital-twin-k8s
     path: digital-twin
