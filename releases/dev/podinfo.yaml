@@ -16,6 +16,8 @@ spec:
   values:
     image:
       tag: 0.5.2
+    imagePullSecrets:
+      - name: digitaltwinregistry
     ingress:
       enabled: true
       tls: []
