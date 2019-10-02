@@ -11,26 +11,43 @@ spec:
   releaseName: digital-twin-api-dev-rn
   chart:
     git: git@bitbucket.org:iminds/digital-twin-k8s
-    path: digital-twin/charts/backend/charts/api
+    path: digital-twin
     ref: feature/DIG-723_flux
   values:
-    image:
-      tag: 0.5.2
-    imagePullSecrets:
-      - name: digitaltwinregistry
-    ingress:
-      enabled: true
-      annotations:
-        kubernetes.io/ingress.class: nginx
-        certmanager.k8s.io/cluster-issuer: letsencrypt-prod
-        nginx.ingress.kubernetes.io/enable-cors: "true"
-      tls:
-        - secretName: tls-secret
-          hosts:
-            - api.dev.digitaltwin.imec-apt.be
-      hosts:
-        - host: api.dev.digitaltwin.imec-apt.be
-          paths:
-             - /(.*)
-    environment:
-      PROTOCOL: http
+    frontend:
+      image:
+        tag: 0.4.1
+
+    backend:
+      api:
+        image:
+          tag: 0.5.2
+
+      maps-api:
+        image:
+          tag: 0.4.1
+
+      config-api:
+        image:
+          tag: 0.1.0
+
+      tag-api:
+        image:
+          tag: 0.1.1
+
+      data-layer-api:
+        image:
+          tag: 0.1.0
+
+      legends-api:
+        image:
+          tag: 0.1.1
+
+      visualisation-api:
+        image:
+          tag: 0.1.0
+  valuesFrom:
+    - chartFileRef:
+        path: environments/development/config.yaml
+    - chartFileRef:
+        path: environments/development/environment.yaml
