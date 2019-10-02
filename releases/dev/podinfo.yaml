@@ -12,7 +12,7 @@ spec:
   chart:
     git: git@bitbucket.org:iminds/digital-twin-k8s
     path: digital-twin/charts/backend/charts/API
-    ref: master
+    ref: feature/DIG-723_flux
   values:
     image:
       tag: 0.5.2
