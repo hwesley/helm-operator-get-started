@@ -6,6 +6,14 @@ metadata:
   namespace: default
   annotations:
     flux.weave.works/automated: "true"
+    flux.weave.works/tag.frontend: regex:^0.*
+    flux.weave.works/tag.api: regex:^0.*
+    flux.weave.works/tag.maps-api: regex:^0.*
+    flux.weave.works/tag.config-api: regex:^0.*
+    flux.weave.works/tag.tag-api: regex:^0.*
+    flux.weave.works/tag.data-layer-api: regex:^0.*
+    flux.weave.works/tag.legends-api: regex:^0.*
+    flux.weave.works/tag.visualisation-api: regex:^0.*
 spec:
   releaseName: digital-twin
   chart:
@@ -63,7 +71,7 @@ spec:
           tag: 0.1.0
 
   valuesFrom:
-  - chartFileRef:
-      path: environments/local/config.yaml
-  - chartFileRef:
-      path: environments/local/environment.yaml
+    - chartFileRef:
+        path: environments/local/config.yaml
+    - chartFileRef:
+        path: environments/local/environment.yaml
