@@ -5,8 +5,8 @@ metadata:
   name: digital-twin
   namespace: default
   annotations:
-#    flux.weave.works/automated: "true"
-#    flux.weave.works/tag.chart-image: glob:dev-*
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.api: glob:dev-*
 spec:
   releaseName: digital-twin
   chart:
