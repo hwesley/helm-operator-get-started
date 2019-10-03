@@ -17,7 +17,7 @@ spec:
       image:
         registry: digitaltwincontainerregistry.azurecr.io
         repository: digital-twin-web-frontend
-        tag: 0.4.1
+        tag: 0.5.0-alpha.72
 
     backend:
       api:
@@ -63,7 +63,7 @@ spec:
           tag: 0.1.0
 
   valuesFrom:
-    - chartFileRef:
-        path: environments/local/config.yaml
-    - chartFileRef:
-        path: environments/local/environment.yaml
+  - chartFileRef:
+      path: environments/local/config.yaml
+  - chartFileRef:
+      path: environments/local/environment.yaml
