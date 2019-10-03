@@ -15,35 +15,51 @@ spec:
   values:
     frontend:
       image:
+        registry: digitaltwincontainerregistry.azurecr.io
+        repository: digital-twin-web-frontend
         tag: 0.4.1
 
     backend:
       api:
         image:
+          registry: digitaltwincontainerregistry.azurecr.io
+          repository: digital-twin-api
           tag: 0.5.2
 
       maps-api:
         image:
+          registry: digitaltwincontainerregistry.azurecr.io
+          repository: digital-twin-maps-api
           tag: 0.4.1
 
       config-api:
         image:
+          registry: digitaltwincontainerregistry.azurecr.io
+          repository: digital-twin-config-api
           tag: 0.1.0
 
       tag-api:
         image:
+          registry: digitaltwincontainerregistry.azurecr.io
+          repository: digital-twin-tag-api
           tag: 0.1.1
 
       data-layer-api:
         image:
+          registry: digitaltwincontainerregistry.azurecr.io
+          repository: digital-twin-data-layer-api
           tag: 0.1.0
 
       legends-api:
         image:
+          registry: digitaltwincontainerregistry.azurecr.io
+          repository: digital-twin-legends-api
           tag: 0.1.1
 
       visualisation-api:
         image:
+          registry: digitaltwincontainerregistry.azurecr.io
+          repository: digital-twin-visualisation-api
           tag: 0.1.0
 
   valuesFrom:
