@@ -9,7 +9,7 @@ metadata:
     flux.weave.works/tag.frontend: regex:^0.*
     flux.weave.works/tag.api: regex:^0.*
     flux.weave.works/tag.maps-api: regex:^0.*
-    flux.weave.works/tag.backend.config-api: regex:^0.*
+    flux.weave.works/tag.config-api.backend: regex:^0.*
     flux.weave.works/tag.tag-api: regex:^0.*
     flux.weave.works/tag.data-layer-api: regex:^0.*
     flux.weave.works/tag.legends-api: regex:^0.*
