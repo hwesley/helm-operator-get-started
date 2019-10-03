@@ -6,7 +6,15 @@ metadata:
   namespace: default
   annotations:
     flux.weave.works/automated: "true"
+    flux.weave.works/tag.frontend: glob:dev-*
     flux.weave.works/tag.api: glob:dev-*
+    flux.weave.works/tag.maps-api: glob:dev-*
+    flux.weave.works/tag.config-api: glob:dev-*
+    flux.weave.works/tag.tag-api: glob:dev-*
+    flux.weave.works/tag.data-layer-api: glob:dev-*
+    flux.weave.works/tag.legends-api: glob:dev-*
+    flux.weave.works/tag.visualisation-api: glob:dev-*
+
 spec:
   releaseName: digital-twin
   chart:
