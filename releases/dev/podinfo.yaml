@@ -40,7 +40,7 @@ spec:
       image:
         registry: digitaltwincontainerregistry.azurecr.io
         repository: digital-twin-config-api
-        tag: 0.1.0
+        tag: 0.1.1-DIG-723-flux.1
     tag-api:
       image:
         registry: digitaltwincontainerregistry.azurecr.io
@@ -63,7 +63,7 @@ spec:
         tag: 0.1.0
 
   valuesFrom:
-    - chartFileRef:
-        path: environments/local/config.yaml
-    - chartFileRef:
-        path: environments/local/environment.yaml
+  - chartFileRef:
+      path: environments/local/config.yaml
+  - chartFileRef:
+      path: environments/local/environment.yaml
