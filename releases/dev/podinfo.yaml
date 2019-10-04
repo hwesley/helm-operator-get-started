@@ -25,7 +25,7 @@ spec:
       image:
         registry: digitaltwincontainerregistry.azurecr.io
         repository: digital-twin-web-frontend
-        tag: 0.5.0-alpha.72
+        tag: 0.5.0-bugfix-DIG-733-map-bounding-box-is-not-working.1
     api:
       image:
         registry: digitaltwincontainerregistry.azurecr.io
