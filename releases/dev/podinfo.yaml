@@ -35,7 +35,7 @@ spec:
       image:
         registry: digitaltwincontainerregistry.azurecr.io
         repository: digital-twin-maps-api
-        tag: 0.4.1
+        tag: 0.4.2
     config-api:
       image:
         registry: digitaltwincontainerregistry.azurecr.io
